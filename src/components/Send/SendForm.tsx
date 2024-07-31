@@ -119,7 +119,6 @@ const SendForm = ({ handleNext, handleUpdateForm, formInputs }: Props) => {
 
   const getAmountHelperText = useMemo(() => {
     const balanceAvailable = `${walletUSDCBalance.toLocaleString()} available`
-    console.log(getUSDCContractAddress(1))
     if (amount !== '' && (isNaN(+amount) || +amount <= 0)) {
       return `Enter a valid amount, ${balanceAvailable}`
     }
