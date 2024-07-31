@@ -11,9 +11,9 @@ export enum Chain {
  * List of all the chain/network IDs supported
  */
 export enum SupportedChainId {
-  ETH_SEPOLIA = 11155111,
+  ETH_SEPOLIA = 1,
   AVAX_FUJI = 43113,
-  ARB_SEPOLIA = 421614,
+  ARB_SEPOLIA = 42161,
 }
 
 /**
@@ -21,9 +21,9 @@ export enum SupportedChainId {
  * TODO: Infer from SupportedChainId
  */
 export const SupportedChainIdHex = {
-  ETH_SEPOLIA: '0xaa36a7',
+  ETH_SEPOLIA: '0x1',
   AVAX_FUJI: '0xa869',
-  ARB_SEPOLIA: '0x66eee',
+  ARB_SEPOLIA: '0xa4b1',
 }
 
 interface ChainToChainIdMap {
@@ -85,14 +85,14 @@ interface AddEthereumChainParameter {
 
 const ETH_SEPOLIA: AddEthereumChainParameter = {
   chainId: SupportedChainIdHex.ETH_SEPOLIA,
-  blockExplorerUrls: ['https://sepolia.etherscan.io'],
+  blockExplorerUrls: ['https://etherscan.io'],
   chainName: 'Sepolia Test Network',
   nativeCurrency: {
     name: 'Ethereum',
     symbol: 'ETH',
     decimals: 18,
   },
-  rpcUrls: ['https://sepolia.infura.io/v3/'],
+  rpcUrls: ['https://ethereum-rpc.publicnode.com'],
 }
 
 const AVAX_FUJI: AddEthereumChainParameter = {
@@ -109,14 +109,14 @@ const AVAX_FUJI: AddEthereumChainParameter = {
 
 const ARB_SEPOLIA: AddEthereumChainParameter = {
   chainId: SupportedChainIdHex.ARB_SEPOLIA,
-  blockExplorerUrls: ['https://sepolia.arbiscan.io/'],
+  blockExplorerUrls: ['https://arbiscan.io/'],
   chainName: 'Arbitrum Sepolia Testnet',
   nativeCurrency: {
     name: 'Ethereum',
     symbol: 'ETH',
     decimals: 18,
   },
-  rpcUrls: ['https://arb-sepolia.g.alchemy.com/v2/demo'],
+  rpcUrls: ['https://arbitrum.llamarpc.com'],
 }
 
 interface ChainIdToChainParameters {
