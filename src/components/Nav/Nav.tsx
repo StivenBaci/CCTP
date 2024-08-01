@@ -36,7 +36,7 @@ function Nav() {
       <Link className="flex flex-row items-center" to="/">
         <img className="inline h-12" src={logo} alt="logo" />
         <span className="ml-4 text-2xl font-semibold text-white">
-          Cross-Chain Transfer Protocol
+          Jeedge - a bridge for jeets
         </span>
       </Link>
 

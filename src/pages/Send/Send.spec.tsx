@@ -8,6 +8,8 @@ describe('Send', () => {
   it('renders send page', () => {
     render(<Send />)
 
-    expect(screen.getByText(/Transfer USDC across chains/i)).toBeInTheDocument()
+    expect(
+      screen.getByText(/Transfer USDC across 7 chains/i)
+    ).toBeInTheDocument()
   })
 })
